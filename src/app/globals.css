@@ -1,0 +1,154 @@
+/* src/app/globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  /* Core palette */
+  --paper: #FBF8F3;
+  --paper-raised: #FFFFFF;
+  --ink: #1C2321;
+  --ink-soft: #5C6360;
+  --ink-faint: #9BA39F;
+
+  --forest: #2D5A4A;
+  --forest-hover: #234539;
+  --forest-tint: #E7EFEA;
+
+  --clay: #C76F4D;
+  --clay-tint: #FBEDE6;
+
+  --sand: #EAE3D7;
+  --sand-line: #DED5C5;
+
+  --success-bg: #E7F2EA;
+  --success-text: #2D5A4A;
+  --warning-bg: #FBEFE0;
+  --warning-text: #9A5B1F;
+  --danger-bg: #FBEAE6;
+  --danger-text: #B5482F;
+
+  /* Aliases used across components */
+  --bg: var(--paper);
+  --surface: var(--paper-raised);
+  --border: var(--sand-line);
+  --text: var(--ink);
+  --text-muted: var(--ink-soft);
+  --text-faint: var(--ink-faint);
+  --primary: var(--forest);
+  --primary-hover: var(--forest-hover);
+  --primary-light: var(--forest-tint);
+  --primary-text: var(--forest);
+  --slate: var(--ink);
+  --slate-700: var(--ink-soft);
+  --slate-500: var(--ink-soft);
+  --slate-300: var(--sand-line);
+  --slate-100: var(--sand);
+  --slate-50: var(--paper);
+
+  --radius: 6px;
+  --radius-lg: 10px;
+  --radius-xl: 14px;
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+html, body { height: 100%; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--forest); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+}
+
+button {
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: var(--radius);
+  transition: all 0.15s;
+}
+
+input, select, textarea {
+  font-family: inherit;
+  font-size: 14px;
+  background: var(--paper-raised);
+  color: var(--ink);
+  border: 1px solid var(--sand-line);
+  border-radius: var(--radius);
+  padding: 9px 13px;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: var(--forest);
+  box-shadow: 0 0 0 3px var(--forest-tint);
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink-soft);
+  margin-bottom: 6px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 18px;
+  border: 1px solid var(--sand-line);
+  background: var(--paper-raised);
+  color: var(--ink);
+  font-weight: 500;
+  white-space: nowrap;
+  border-radius: var(--radius);
+}
+.btn:hover { background: var(--sand); border-color: var(--sand-line); }
+.btn:disabled { opacity: 0.45; cursor: not-allowed; }
+
+.btn-primary {
+  background: var(--forest);
+  color: #fff;
+  border-color: var(--forest);
+}
+.btn-primary:hover { background: var(--forest-hover); border-color: var(--forest-hover); }
+
+.btn-ghost {
+  background: none;
+  border-color: transparent;
+  color: var(--ink-soft);
+  padding: 8px 14px;
+}
+.btn-ghost:hover { background: var(--sand); border-color: transparent; }
+
+/* Layout */
+.card {
+  background: var(--paper-raised);
+  border: 1px solid var(--sand-line);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+}
+
+.page {
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 32px 20px;
+}
+
+.divider { height: 1px; background: var(--sand-line); margin: 18px 0; }
